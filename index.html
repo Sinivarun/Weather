@@ -42,10 +42,10 @@
             <div class="col-4"></div>
 
             <div class="col-4 mt-2 ms-5 ">
-                <div class="card" style="width: 25rem;">
+                <div class="card" style="width: 25rem;font-family: 'Dancing Script', cursive;background-color: yellow;">
                     <div class="card-body">
                         <div class="row p-2">
-                        <h5 class="card-title">Temperature <i class="fas fa-thermometer-full fa-3x"></i>:<span class="border" id="temperature">
+                        <h5 class="card-title">Temperature <i class="fas fa-thermometer-full fa-3x "></i>:<span class="border" id="temperature">
                         </span></div></h5>
                        
                         
@@ -93,15 +93,15 @@
         let p_name = place.value;
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${place.value}&units=metric&appid=abf15ea2ea441fe604c48ebbeacc1d1e`
         fetch(url).then(res => res.json()).then(data => {
-            temperature.innerHTML = data.main.temp;
+            temperature.innerHTML = data.main.temp+'&deg ';
 
 
-            press.innerHTML = data.main.pressure;
+            press.innerHTML = data.main.pressure+'mbar ';
             weather.innerHTML = data['weather'][0]['main'];
 
             weather.innerHTML = data['weather'][0]['description'];
-            humidity.innerHTML = data.main.humidity;
-            wind.innerHTML = data.wind.speed;
+            humidity.innerHTML = data.main.humidity+'%';
+            wind.innerHTML = data.wind.speed+'km/h';
 
 
 
