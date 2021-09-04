@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./weatherdata.css" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-dark ">
+        <div class="container">
+            <h1>Weather</h1>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 "></div>
+            <div class="col-4">
+                <input type="text" name="" id="place" placeholder="Enter City Name">
+            </div>
+
+            <div class="col-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4  ">
+                <button class="btn btn-success  " onclick="fetchWeather()">Find</button>
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-4 ">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Temperature</h5>
+                        <i class="fas fa-thermometer-full fa-5x"></i>
+                        <span class="border" id="temperature">
+                        </span>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="col-4">
+
+                <div class="card border-" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Pressure</h5>
+                        <img src="./pressure-.png" style="width:40px;height:80px;">
+                        <span class="border " id="press">
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-4">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather</h5>
+                        <i class="fas fa-cloud fa-5x"></i>
+                        <span class="border " id="weather">
+                        </span>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-2"></div>
+        
+            <div class="col-4">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Humidity</h5>
+                        <img src="./humidity.jpg" style="width:40px;height:80px;">
+                        <span class="border " id="humidity">
+                        </span>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4">
+
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">WindSpeed</h5>
+                        <i class="fas fa-wind fa-5x"></i>
+                        <span class="border " id="wind">
+                        </span>
+
+                    </div>
+                </div>
+               
+            </div>
+            <div class="col-2"></div>
+            
+
+
+    </div>
+
+</body>
+<script>
+    function fetchWeather() {
+        let p_name = place.value;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${place.value}&units=metric&appid=abf15ea2ea441fe604c48ebbeacc1d1e`
+        fetch(url).then(res => res.json()).then(data => {
+            temperature.innerHTML = data.main.temp;
+
+
+            press.innerHTML = data.main.pressure;
+            weather.innerHTML = data['weather'][0]['main'];
+
+            weather.innerHTML = data['weather'][0]['description'];
+           humidity.innerHTML = data.main.humidity;
+           wind.innerHTML=data.wind.speed;
+
+
+
+
+        })
+    }
+</script>
+
+</html>
