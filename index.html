@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-dark ">
+    <nav class="navbar-fluid navbar-light bg-dark  ">
         <div class="container">
             <h1>Weather</h1>
         </div>
@@ -39,82 +39,50 @@
         </div>
 
         <div class="row mt-5">
+            <div class="col-4"></div>
 
-            <div class="col-4 ">
+            <div class="col-4 mt-2 ms-5 ">
                 <div class="card" style="width: 25rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Temperature</h5>
-                        <i class="fas fa-thermometer-full fa-5x"></i>
-                        <span class="border" id="temperature">
-                        </span>
+                        <div class="row p-2">
+                        <h5 class="card-title">Temperature <i class="fas fa-thermometer-full fa-3x"></i>:<span class="border" id="temperature">
+                        </span></div></h5>
+                       
+                        
+                        <div class="row p-2">
+                        <h5 class="card-title">Pressure<img src="./pressure-.png" style="width:40px;height:40px;">:<span class="border " id="press">
+                        </span></div></h5>
+                        
+                        
+                        <div class="row p-2">
+                        <h5 class="card-title">Weather<i class="fas fa-cloud fa-3x"></i>:<span class="border " id="weather">
+                        </span></div></h5>
+                        
+                        
+                        <div class="row p-2">
+                        <h5 class="card-title">Humidity<img src="./humidity.jpg" style="width:40px;height:40px;">:<span class="border " id="humidity">
+                        </span></div></h5>
+                        
+                        
+                        <div class="row p-2">
+                        <h5 class="card-title">WindSpeed<i class="fas fa-wind fa-3x"></i>:
+                            <span class="border " id="wind">
+                            </span></div>
+    
+    </h5>
+                        
+
+
 
                     </div>
                 </div>
 
-            </div>
-
-
-
-            <div class="col-4">
-
-                <div class="card border-" style="width: 25rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Pressure</h5>
-                        <img src="./pressure-.png" style="width:40px;height:80px;">
-                        <span class="border " id="press">
-                        </span>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-4">
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Weather</h5>
-                        <i class="fas fa-cloud fa-5x"></i>
-                        <span class="border " id="weather">
-                        </span>
-
-                    </div>
-                </div>
+                <div class="col-4"></div>
 
             </div>
-
         </div>
 
 
-        <div class="row mt-5">
-            <div class="col-2"></div>
-        
-            <div class="col-4">
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Humidity</h5>
-                        <img src="./humidity.jpg" style="width:40px;height:80px;">
-                        <span class="border " id="humidity">
-                        </span>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-4">
-
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">WindSpeed</h5>
-                        <i class="fas fa-wind fa-5x"></i>
-                        <span class="border " id="wind">
-                        </span>
-
-                    </div>
-                </div>
-               
-            </div>
-            <div class="col-2"></div>
-            
 
 
     </div>
@@ -132,8 +100,8 @@
             weather.innerHTML = data['weather'][0]['main'];
 
             weather.innerHTML = data['weather'][0]['description'];
-           humidity.innerHTML = data.main.humidity;
-           wind.innerHTML=data.wind.speed;
+            humidity.innerHTML = data.main.humidity;
+            wind.innerHTML = data.wind.speed;
 
 
 
