@@ -21,7 +21,7 @@
       </header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg--4 "></div>
+            <div class="col-lg-4 "></div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <input   type="text" name="" id="place" placeholder="Enter City Name">
             </div>
@@ -41,9 +41,12 @@
             <div class="col-lg-4"></div>
 
             <div class="col-lg-4 col-md-6 col-sm-6 mt-2 ms-5 ">
-                <div class="card" style="width: 25rem;font-family: 'Dancing Script', cursive;">
+                <div class="card" style="width: 25rem;font-family: 'Dancing Script', cursive; background-color:#1c1c47;color:white;">
                     <div class="card-body">
+                        <h5 class="card-title">City :<span class="border" id="city"></span>
+                        </span></div></h5>
                         <div class="row p-2">
+
                         <h5 class="card-title">Temperature <i class="fas fa-thermometer-full fa-3x "></i>:<span class="border" id="temperature">
                         </span></div></h5>
                        
@@ -59,7 +62,7 @@
                         
                         
                         <div class="row p-2">
-                        <h5 class="card-title">Humidity<img src="./humidity.jpg" style="width:40px;height:40px;background-color: yellow;">:<span class="border " id="humidity">
+                        <h5 class="card-title">Humidity<img src="./humidity.jpg" style="width:40px;height:40px;">:<span class="border " id="humidity">
                         </span></div></h5>
                         
                         
@@ -92,6 +95,7 @@
         let p_name = place.value;
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${place.value}&units=metric&appid=abf15ea2ea441fe604c48ebbeacc1d1e`
         fetch(url).then(res => res.json()).then(data => {
+            city.innerHTML=p_name;
             temperature.innerHTML = data.main.temp+'&deg ';
 
 
