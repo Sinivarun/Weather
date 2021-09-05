@@ -14,35 +14,34 @@
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
+
 <body>
-    <nav class="navbar  navbar-expand-lg navbar-light  ">
-        <div class="container">
-            <h1>Weather</h1>
-        </div>
-    </nav>
+    <header>
+        <p class="h1">Country Information</p>
+      </header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-4 "></div>
-            <div class="col-4">
-                <input type="text" name="" id="place" placeholder="Enter City Name">
+            <div class="col-lg--4 "></div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <input   type="text" name="" id="place" placeholder="Enter City Name">
             </div>
 
-            <div class="col-4"></div>
+            <div class="col-lg--4"></div>
         </div>
 
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4  ">
-                <button class="btn btn-success  " onclick="fetchWeather()">Find</button>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4 col-md-6 col-sm-6  ">
+                <button class="btn btn-success " onclick="fetchWeather()">Find</button>
             </div>
-            <div class="col-4"></div>
+            <div class="col-lg-4"></div>
         </div>
 
         <div class="row mt-5">
-            <div class="col-4"></div>
+            <div class="col-lg-4"></div>
 
-            <div class="col-4 mt-2 ms-5 ">
-                <div class="card" style="width: 25rem;font-family: 'Dancing Script', cursive;background-color: yellow;">
+            <div class="col-lg-4 col-md-6 col-sm-6 mt-2 ms-5 ">
+                <div class="card" style="width: 25rem;font-family: 'Dancing Script', cursive;">
                     <div class="card-body">
                         <div class="row p-2">
                         <h5 class="card-title">Temperature <i class="fas fa-thermometer-full fa-3x "></i>:<span class="border" id="temperature">
@@ -60,7 +59,7 @@
                         
                         
                         <div class="row p-2">
-                        <h5 class="card-title">Humidity<img src="./humidity.jpg" style="width:40px;height:40px;">:<span class="border " id="humidity">
+                        <h5 class="card-title">Humidity<img src="./humidity.jpg" style="width:40px;height:40px;background-color: yellow;">:<span class="border " id="humidity">
                         </span></div></h5>
                         
                         
@@ -77,7 +76,7 @@
                     </div>
                 </div>
 
-                <div class="col-4"></div>
+                <div class="col-lg-4"></div>
 
             </div>
         </div>

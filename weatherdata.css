@@ -5,34 +5,38 @@ color:white;
 
 }
 
+
 body{
   background-image:url(./w_bg.jfif);
   height:100vh;
   background-size:cover;
+  background-repeat: no-repeat;
   font-family: 'Fira Sans', sans-serif;
   color:blue;
 
 }
-*{
-  margin:0;
-  padding:0;
-  
-}
+
 input[type="text"]{
   height:50px;
-  width:400px;
+  width:430px;
   background:#e7e7e7;
   font-family: 'Fira Sans', sans-serif;
   font-weight:bold;
-  margin-top:20%;
-  margin-left:10%;
+  margin-top:20px;
+  margin-left:670px;
   text-align: center;
 
 }
-.btn  {
-margin-left: 20%;
-margin-top: 10%;
-width:200px;
+
+.btn{
+  margin:10px;
+  margin-left: 150px;
+  margin-top: 20px;;
+  border:none;
+  width:250px;
+  border-radius:50%;
+  height:50px;
+  align-items: center;
 }
 #temperature{
   width:100%;
@@ -44,6 +48,8 @@ width:200px;
   height:100%;
   background-color: white;
 }
+
+
 span{
   color:blue;
   font-size: larger;
@@ -53,7 +59,21 @@ span{
 
 
 }
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
 .nav{
   
   background-color: black;
+}
+.card{
+  padding:10px;
+  background-color:#1c1c47;
+  width:100%;
+  max-width:420px;
+  margin-left: 10px;;
 }
